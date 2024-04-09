@@ -89,3 +89,14 @@ body.dark-mode {
         height: 300px;
     }
 }
+
+/* Additional styles for user account and settings sections */
+.user-section,
+.location-section,
+.settings-section {
+    margin-bottom: 20px;
+}
+
+.settings-section {
+    display: none; /* Hide settings section by default */
+}

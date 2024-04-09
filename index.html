@@ -12,65 +12,67 @@
     <div class="container">
         <h1>RoutifyMe</h1>
 
-        <!-- Placeholder for the map container -->
-        <div class="map-container" id="map-placeholder">
-            <p>Map will be displayed here</p>
+        <!-- Map container with map image -->
+        <div class="map-container" id="map">
+            <img src="static/images/map_image.jpeg" alt="Map Image">
         </div>
 
-        <!-- Half-page overlay for additional content -->
-        <div id="overlay" class="overlay" style="display: none;">
-            <!-- Content for searching locations, nearby places, or route finder -->
+        <!-- User account section -->
+        <div class="user-section">
+            <h2>User Account</h2>
+            <form id="loginForm">
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br>
+                <label for="password">Password:</label><br>
+                <input type="password" id="password" name="password" required><br>
+                <input type="submit" value="Login">
+            </form>
+            <button id="toggleSettingsButton" class="button">Settings</button>
+        </div>
+
+        <!-- Location forms section -->
+        <div class="location-section">
+            <h2>Location Forms</h2>
             <!-- Location search form -->
             <form id="locationSearchForm">
-                <label for="location"><i class="fas fa-search-location"></i> Search Location:</label><br>
+                <label for="location">Search Location:</label><br>
                 <input type="text" id="location" name="location"><br>
                 <input type="submit" value="Search">
             </form>
-
-            <!-- Nearby places form -->
+            
+            <!-- Other location forms (nearby places, route finder, etc.) -->
             <form id="nearbyPlacesForm">
-                <label for="nearby"><i class="fas fa-map-marker-alt"></i> Find Nearby Places:</label><br>
+                <label for="nearby">Find Nearby Places:</label><br>
                 <input type="text" id="nearby" name="nearby"><br>
                 <input type="submit" value="Find">
             </form>
 
-            <!-- Route finder form -->
             <form id="routeFinderForm">
-                <label for="start"><i class="fas fa-route"></i> Find Route:</label><br>
+                <label for="start">Find Route:</label><br>
                 <input type="text" id="start" name="start" placeholder="Start location"><br>
                 <input type="text" id="end" name="end" placeholder="End location"><br>
                 <input type="submit" value="Find Route">
             </form>
-            
-            <!-- Create location form -->
-            <form id="createLocationForm">
-                <label for="newLocation"><i class="fas fa-map-marker-alt"></i> Create Location:</label><br>
-                <input type="text" id="newLocation" name="newLocation" placeholder="New location"><br>
-                <input type="submit" value="Create Location">
-            </form>
 
-            <!-- Update location form -->
-            <form id="updateLocationForm">
-                <label for="locationId"><i class="fas fa-map-marker-alt"></i> Location ID:</label><br>
-                <input type="text" id="locationId" name="locationId" placeholder="Location ID to update"><br>
-                <label for="updatedLocation"><i class="fas fa-map-marker-alt"></i> Updated Location:</label><br>
-                <input type="text" id="updatedLocation" name="updatedLocation" placeholder="Updated location"><br>
-                <input type="submit" value="Update Location">
-            </form>
-
-            <!-- Login form -->
-            <form id="loginForm">
-                <label for="email"><i class="fas fa-user"></i> Email:</label><br>
-                <input type="email" id="email" name="email" required><br>
-                <label for="password"><i class="fas fa-lock"></i> Password:</label><br>
-                <input type="password" id="password" name="password" required><br>
-                <input type="submit" value="Login">
-            </form>
-            <button id="closeOverlayButton" class="button">Close Overlay</button>
+            <button id="toggleLocationFormsButton" class="button">Hide Location Forms</button>
         </div>
 
-        <!-- Optimize button -->
-        <button id="optimizeButton" class="button">Optimize Route</button>
+        <!-- Settings section (initially hidden) -->
+        <div id="settings" class="settings-section" style="display: none;">
+            <h2>Settings</h2>
+            <label for="theme">Theme:</label>
+            <select id="theme">
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+            </select><br><br>
+            <label for="language">Language:</label>
+            <select id="language">
+                <option value="en">English</option>
+                <option value="fr">French</option>
+                <option value="es">Spanish</option>
+            </select><br><br>
+            <button id="closeSettingsButton" class="button">Close Settings</button>
+        </div>
 
         <!-- Toggle button for dark/light mode -->
         <button id="toggleThemeButton" class="button">Toggle Theme</button>
@@ -81,3 +83,4 @@
 </body>
 
 </html>
+
