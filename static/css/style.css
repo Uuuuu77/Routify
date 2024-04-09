@@ -1,91 +1,91 @@
 /* Static/css/styles.css */
 
 body {
-    font-family: 'Arial', sans-serif; /* Default font family */
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
 }
 
 .container {
-    max-width: 800px; /* Limit content width */
+    max-width: 800px;
     margin: 50px auto;
-    text-align: center; /* Center align text within container */
+    text-align: center;
 }
 
 h1 {
-    color: #333; /* Default text color for headings */
+    color: #333; /* Dark gray */
 }
 
 .map-container {
-    height: 400px; /* Set a fixed height for the map container */
-    margin-bottom: 20px; /* Add some space below the map container */
+    height: 400px;
+    margin-bottom: 20px;
 }
 
 #map {
-    width: 100%; /* Make the map container responsive */
-    height: 100%; /* Make the map container responsive */
+    width: 100%;
+    height: 100%;
 }
 
 .overlay {
-    position: fixed; /* Fix the overlay position */
-    top: 0; /* Place the overlay at the top of the viewport */
-    left: 0; /* Place the overlay at the left of the viewport */
-    width: 100%; /* Make the overlay cover the entire width */
-    height: 100%; /* Make the overlay cover the entire height */
-    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
-    color: #ffffff; /* Light text color on the overlay */
-    padding: 20px; /* Add padding to the overlay content */
-    box-sizing: border-box; /* Include padding in the overlay's total width and height */
-    overflow: auto; /* Allow scrolling if content overflows */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark overlay with transparency */
+    color: #ffffff; /* White text */
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: auto;
 }
 
 form {
-    margin-bottom: 20px; /* Add some space below each form */
+    margin-bottom: 20px;
 }
 
-input[type="text"], input[type="email"], input[type="password"] {
-    width: 100%; /* Make form inputs take up full width */
-    padding: 10px; /* Add padding to form inputs */
-    margin-bottom: 10px; /* Add some space below each form input */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
 }
 
 .button {
-    display: inline-block; /* Display buttons inline */
-    padding: 10px 20px; /* Add padding to buttons */
-    background-color: #4CAF50; /* Default button background color */
-    color: white; /* Default button text color */
-    text-decoration: none; /* Remove underline from button text */
-    font-size: 16px; /* Default font size for buttons */
-    margin-top: 10px; /* Add some space above each button */
-    cursor: pointer; /* Show pointer cursor on hover */
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Green */
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
 }
 
 .button:hover {
-    background-color: #45a049; /* Button background color on hover */
+    background-color: #45a049; /* Darker green on hover */
 }
 
-/* Dark mode styles */
 body.dark-mode {
-    background-color: #121212; /* Dark background color */
-    color: #ffffff; /* Light text color */
+    background-color: #121212; /* Dark background */
+    color: #ffffff; /* White text */
 }
 
 .dark-mode h1 {
-    color: #ffffff; /* Adjust text color for dark mode */
+    color: #ffffff; /* White heading text in dark mode */
 }
 
 .dark-mode .overlay {
-    background-color: rgba(0, 0, 0, 0.8); /* Dark overlay background color */
-    color: #ffffff; /* Light text color on the overlay */
+    background-color: rgba(0, 0, 0, 0.8); /* Dark overlay with transparency */
+    color: #ffffff; /* White text */
 }
 
-/* Responsive design */
 @media screen and (max-width: 600px) {
     .container {
-        margin: 20px auto; /* Center container with less margin on smaller screens */
+        margin: 20px auto;
     }
 
     .map-container {
-        height: 300px; /* Reduce map container height on smaller screens */
+        height: 300px;
     }
 }

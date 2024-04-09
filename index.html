@@ -12,8 +12,10 @@
     <div class="container">
         <h1>RoutifyMe</h1>
 
-        <!-- Map container -->
-        <div class="map-container" id="map"></div>
+        <!-- Placeholder for the map container -->
+        <div class="map-container" id="map-placeholder">
+            <p>Map will be displayed here</p>
+        </div>
 
         <!-- Half-page overlay for additional content -->
         <div id="overlay" class="overlay" style="display: none;">
@@ -41,7 +43,7 @@
             </form>
             
             <!-- Create location form -->
-                <form id="createLocationForm">
+            <form id="createLocationForm">
                 <label for="newLocation"><i class="fas fa-map-marker-alt"></i> Create Location:</label><br>
                 <input type="text" id="newLocation" name="newLocation" placeholder="New location"><br>
                 <input type="submit" value="Create Location">
@@ -70,12 +72,9 @@
         <!-- Optimize button -->
         <button id="optimizeButton" class="button">Optimize Route</button>
 
-	<!-- Toggle button for dark/light mode -->
+        <!-- Toggle button for dark/light mode -->
         <button id="toggleThemeButton" class="button">Toggle Theme</button>
     </div>
-
-    <!-- Include Google Maps API script -->
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDB2cipuVMBFvqjj8i1HOrff-KjSemf71s&callback=initializeMap"></script>
 
     <!-- Include main.js script -->
     <script type="text/javascript" src="static/js/main.js"></script>
