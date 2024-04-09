@@ -1,0 +1,91 @@
+/* Static/css/styles.css */
+
+body {
+    font-family: 'Arial', sans-serif; /* Default font family */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px; /* Limit content width */
+    margin: 50px auto;
+    text-align: center; /* Center align text within container */
+}
+
+h1 {
+    color: #333; /* Default text color for headings */
+}
+
+.map-container {
+    height: 400px; /* Set a fixed height for the map container */
+    margin-bottom: 20px; /* Add some space below the map container */
+}
+
+#map {
+    width: 100%; /* Make the map container responsive */
+    height: 100%; /* Make the map container responsive */
+}
+
+.overlay {
+    position: fixed; /* Fix the overlay position */
+    top: 0; /* Place the overlay at the top of the viewport */
+    left: 0; /* Place the overlay at the left of the viewport */
+    width: 100%; /* Make the overlay cover the entire width */
+    height: 100%; /* Make the overlay cover the entire height */
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+    color: #ffffff; /* Light text color on the overlay */
+    padding: 20px; /* Add padding to the overlay content */
+    box-sizing: border-box; /* Include padding in the overlay's total width and height */
+    overflow: auto; /* Allow scrolling if content overflows */
+}
+
+form {
+    margin-bottom: 20px; /* Add some space below each form */
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+    width: 100%; /* Make form inputs take up full width */
+    padding: 10px; /* Add padding to form inputs */
+    margin-bottom: 10px; /* Add some space below each form input */
+}
+
+.button {
+    display: inline-block; /* Display buttons inline */
+    padding: 10px 20px; /* Add padding to buttons */
+    background-color: #4CAF50; /* Default button background color */
+    color: white; /* Default button text color */
+    text-decoration: none; /* Remove underline from button text */
+    font-size: 16px; /* Default font size for buttons */
+    margin-top: 10px; /* Add some space above each button */
+    cursor: pointer; /* Show pointer cursor on hover */
+}
+
+.button:hover {
+    background-color: #45a049; /* Button background color on hover */
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #121212; /* Dark background color */
+    color: #ffffff; /* Light text color */
+}
+
+.dark-mode h1 {
+    color: #ffffff; /* Adjust text color for dark mode */
+}
+
+.dark-mode .overlay {
+    background-color: rgba(0, 0, 0, 0.8); /* Dark overlay background color */
+    color: #ffffff; /* Light text color on the overlay */
+}
+
+/* Responsive design */
+@media screen and (max-width: 600px) {
+    .container {
+        margin: 20px auto; /* Center container with less margin on smaller screens */
+    }
+
+    .map-container {
+        height: 300px; /* Reduce map container height on smaller screens */
+    }
+}

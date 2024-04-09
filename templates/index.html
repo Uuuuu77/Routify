@@ -69,10 +69,13 @@
 
         <!-- Optimize button -->
         <button id="optimizeButton" class="button">Optimize Route</button>
+
+	<!-- Toggle button for dark/light mode -->
+        <button id="toggleThemeButton" class="button">Toggle Theme</button>
     </div>
 
-    <!-- Include Bing Maps API script -->
-    <script type="text/javascript" src="https://www.bing.com/api/maps/mapcontrol?key={{ Bing_maps_key }}&callback=initializeMap" async defer></script>
+    <!-- Include Google Maps API script -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDB2cipuVMBFvqjj8i1HOrff-KjSemf71s&callback=initializeMap"></script>
 
     <!-- Include main.js script -->
     <script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
