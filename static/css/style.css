@@ -1,124 +1,74 @@
 /* Static/css/styles.css */
 
+/* Default dark blue color scheme */
+:root {
+    --background-color: #283593; /* Dark blue background */
+    --text-color: #ffffff; /* White text */
+}
+
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+    background-color: var(--background-color); /* Set default background color */
+    color: var(--text-color); /* Set default text color */
 }
 
 .container {
     max-width: 800px;
-    margin: 50px auto;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.navigation button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px; /* Add margin between buttons */
+}
+
+.navigation button:last-child {
+    margin-right: 0; /* Remove margin from the last button */
+}
+
+.map-section {
     text-align: center;
 }
 
-h1 {
-    color: #333; /* Dark gray */
-}
-
 .map-container {
-    height: 400px;
-    margin-bottom: 20px;
-}
-
-#map {
-    width: 100%;
-    height: 100%;
-}
-
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* Dark overlay with transparency */
-    color: #ffffff; /* White text */
-    padding: 20px;
-    box-sizing: border-box;
-    overflow: auto;
-}
-
-form {
-    margin-bottom: 20px;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-}
-
-.button {
+    position: relative;
     display: inline-block;
-    padding: 10px 20px;
-    background-color: #4CAF50; /* Green */
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    margin-top: 10px;
-    cursor: pointer;
+    margin-bottom: 20px;
 }
 
-.button:hover {
-    background-color: #45a049; /* Darker green on hover */
-}
-
-body.dark-mode {
-    background-color: #121212; /* Dark background */
-    color: #ffffff; /* White text */
-}
-
-.dark-mode h1 {
-    color: #ffffff; /* White heading text in dark mode */
-}
-
-.dark-mode .overlay {
-    background-color: rgba(0, 0, 0, 0.8); /* Dark overlay with transparency */
-    color: #ffffff; /* White text */
-}
-
-@media screen and (max-width: 600px) {
-    .container {
-        margin: 20px auto;
-    }
-
-    .map-container {
-        height: 300px;
-    }
-}
-
-/* Additional styles for user account and settings sections */
 .user-account {
-    float: right;
-    width: 30%;
-}
-
-.user-account h2 {
-    margin-bottom: 10px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    text-align: left;
 }
 
 .sliding-page {
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-color: #fff;
-    z-index: 999;
-    display: none;
     padding: 20px;
-    overflow-y: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: none;
 }
 
 .sliding-content {
     margin-bottom: 20px;
-}
-
-.sliding-content h2 {
-    margin-bottom: 10px;
 }
 
 .navigation-list {
@@ -126,25 +76,45 @@ body.dark-mode {
     padding: 0;
 }
 
+.navigation-list h3 {
+    margin-bottom: 10px;
+}
+
 .navigation-list li {
     margin-bottom: 20px;
 }
 
+.navigation-list input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.navigation-list input[type="submit"],
 .navigation-list button {
-    display: block;
     width: 100%;
     padding: 10px;
-    background-color: #4CAF50; /* Green */
+    background-color: #4CAF50;
     color: white;
-    text-align: left;
     border: none;
     cursor: pointer;
 }
 
+.navigation-list input[type="submit"]:hover,
 .navigation-list button:hover {
-    background-color: #45a049; /* Darker green on hover */
+    background-color: #45a049;
 }
 
-.settings-section {
-    display: none; /* Hide settings section by default */
+.sliding-page button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.sliding-page button:hover {
+    background-color: #d32f2f;
 }
