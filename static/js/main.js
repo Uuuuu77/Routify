@@ -1,5 +1,3 @@
-// static/js/main.js
-
 document.addEventListener('DOMContentLoaded', () => {
     // Function to handle form submissions
     const handleFormSubmit = (event) => {

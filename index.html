@@ -10,24 +10,10 @@
 
 <body>
     <div class="container">
-        <!-- Navigation Bar -->
-        <nav class="navigation">
-            <button id="homeButton">Home</button>
-            <button id="exploreButton">Explore</button>
-            <button id="goButton">Go</button>
-        </nav>
-
-        <!-- Map Section -->
-        <div class="map-section">
-            <h1>RoutifyMe</h1>
-            <div class="map-container" id="map">
-                <img src="static/images/map_image.jpeg" alt="Map Image">
-            </div>
-        </div>
-
         <!-- User Account Section -->
         <div class="user-account">
-            <h2>User Account</h2>
+            <h2>= User Account</h2>
+            <!-- Placeholder for user account functionality -->
             <form id="loginForm">
                 <label for="email">Email:</label><br>
                 <input type="email" id="email" name="email" required><br>
@@ -38,6 +24,24 @@
             <button id="toggleSettingsButton" class="button">Settings</button>
         </div>
 
+        <!-- Search Place Section -->
+        <div class="search-place">
+            <h2>Search Place</h2>
+            <!-- Placeholder for search place functionality -->
+            <form id="searchPlaceForm">
+                <label for="place">Place:</label><br>
+                <input type="text" id="place" name="place"><br>
+                <input type="submit" value="Search">
+            </form>
+        </div>
+
+        <!-- Map Section -->
+        <div class="map-section">
+            <div class="map-container" id="map">
+                <img src="static/images/map_image.jpeg" alt="Map Image">
+            </div>
+        </div>
+
         <!-- Sliding Page Overlay -->
         <div class="sliding-page">
             <div class="sliding-content">
@@ -46,6 +50,7 @@
                     <li>
                         <h3>Route Finder</h3>
                         <form id="routeFinderForm">
+                            <!-- Form for route finder -->
                             <label for="start">Start Location:</label><br>
                             <input type="text" id="start" name="start"><br>
                             <label for="end">End Location:</label><br>
@@ -56,6 +61,7 @@
                     <li>
                         <h3>Nearby Places</h3>
                         <form id="nearbyPlacesForm">
+                            <!-- Form for nearby places -->
                             <label for="nearby">Search Nearby:</label><br>
                             <input type="text" id="nearby" name="nearby"><br>
                             <input type="submit" value="Find">
@@ -64,29 +70,13 @@
                     <li>
                         <h3>My Location</h3>
                         <form id="myLocationForm">
+                            <!-- Form for my location -->
                             <button id="getCurrentLocationButton">Get Current Location</button>
                         </form>
                     </li>
                 </ul>
             </div>
             <button id="closeSlidingPageButton">Close</button>
-        </div>
-
-        <!-- Settings Section -->
-        <div id="settings" class="settings-section" style="display: none;">
-            <h2>Settings</h2>
-            <label for="theme">Theme:</label>
-            <select id="theme">
-                <option value="light">Light</option>
-                <option value="dark">Dark</option>
-            </select><br><br>
-            <label for="language">Language:</label>
-            <select id="language">
-                <option value="en">English</option>
-                <option value="fr">French</option>
-                <option value="es">Spanish</option>
-            </select><br><br>
-            <button id="closeSettingsButton" class="button">Close Settings</button>
         </div>
     </div>
 

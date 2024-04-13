@@ -18,6 +18,7 @@ body {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
+    box-sizing: border-box; /* Include padding in max-width calculation */
 }
 
 .navigation {
@@ -32,7 +33,6 @@ body {
     color: white;
     border: none;
     cursor: pointer;
-    margin-right: 10px; /* Add margin between buttons */
 }
 
 .navigation button:last-child {
@@ -46,7 +46,8 @@ body {
 .map-container {
     position: relative;
     display: inline-block;
-    margin-bottom: 20px;
+    margin: 0 auto; /* Center the map image */
+    max-width: 100%; /* Ensure map image doesn't overflow */
 }
 
 .user-account {
@@ -117,4 +118,10 @@ body {
 
 .sliding-page button:hover {
     background-color: #d32f2f;
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 10px; /* Decrease padding for smaller screens */
+    }
 }
