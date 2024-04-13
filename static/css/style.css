@@ -91,10 +91,58 @@ body.dark-mode {
 }
 
 /* Additional styles for user account and settings sections */
-.user-section,
-.location-section,
-.settings-section {
+.user-account {
+    float: right;
+    width: 30%;
+}
+
+.user-account h2 {
+    margin-bottom: 10px;
+}
+
+.sliding-page {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 300px;
+    background-color: #fff;
+    z-index: 999;
+    display: none;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.sliding-content {
     margin-bottom: 20px;
+}
+
+.sliding-content h2 {
+    margin-bottom: 10px;
+}
+
+.navigation-list {
+    list-style: none;
+    padding: 0;
+}
+
+.navigation-list li {
+    margin-bottom: 20px;
+}
+
+.navigation-list button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50; /* Green */
+    color: white;
+    text-align: left;
+    border: none;
+    cursor: pointer;
+}
+
+.navigation-list button:hover {
+    background-color: #45a049; /* Darker green on hover */
 }
 
 .settings-section {

@@ -13,25 +13,22 @@ document.addEventListener('DOMContentLoaded', () => {
         let endpoint = '/my-endpoint'; // Replace with your actual endpoint
         let method = 'POST';
 
-        if (event.target.id === 'updateLocationForm') {
-            endpoint += `/${data.locationId}`;
-            method = 'PUT';
+        if (event.target.id === 'routeFinderForm') {
+            // Handle route finder form submission
+            // Add your logic to handle route finding
+            alert(`Finding route from ${data.start} to ${data.end}`);
+        } else if (event.target.id === 'nearbyPlacesForm') {
+            // Handle nearby places form submission
+            // Add your logic to find nearby places
+            alert(`Finding nearby places for ${data.nearby}`);
+        } else if (event.target.id === 'myLocationForm') {
+            // Handle my location form submission
+            // Add your logic to get user's current location
+            alert(`Getting current location`);
+        } else {
+            console.error('Form ID not recognized.');
+            return;
         }
-
-        // Send form data to server and handle response
-        fetch(endpoint, {
-            method: method,
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-        })
-        .then(response => response.json())
-        .then(data => {
-            // Handle the response data
-            alert(`Form ${event.target.id} submitted successfully.`);
-        })
-        .catch(error => console.error('Error:', error)); // Log any errors to console
     };
 
     // Add event listeners to all forms
@@ -39,13 +36,18 @@ document.addEventListener('DOMContentLoaded', () => {
         form.addEventListener('submit', handleFormSubmit);
     });
 
-    // Show overlay when map container is clicked
-    document.querySelector('.map-container').addEventListener('click', () => {
-        document.getElementById('overlay').style.display = 'flex';
+    // Show sliding page overlay when Settings button is clicked
+    document.getElementById('toggleSettingsButton').addEventListener('click', () => {
+        document.querySelector('.sliding-page').style.display = 'block';
     });
 
-    // Close overlay when the close button is clicked
-    document.getElementById('closeOverlayButton').addEventListener('click', () => {
-        document.getElementById('overlay').style.display = 'none';
+    // Close sliding page overlay when the close button is clicked
+    document.getElementById('closeSlidingPageButton').addEventListener('click', () => {
+        document.querySelector('.sliding-page').style.display = 'none';
+    });
+
+    // Toggle dark mode when the theme button is clicked
+    document.getElementById('toggleThemeButton').addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
     });
 });

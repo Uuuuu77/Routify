@@ -5,20 +5,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RoutifyMe</title>
-    <link rel="stylesheet" type="text/css" href="static/css/styles.css">
+    <link rel="stylesheet" href="./static/css/styles.css">
 </head>
 
 <body>
     <div class="container">
-        <h1>RoutifyMe</h1>
+        <!-- Navigation Bar -->
+        <nav class="navigation">
+            <button id="homeButton">Home</button>
+            <button id="exploreButton">Explore</button>
+            <button id="goButton">Go</button>
+        </nav>
 
-        <!-- Map container with map image -->
-        <div class="map-container" id="map">
-            <img src="static/images/map_image.jpeg" alt="Map Image">
+        <!-- Map Section -->
+        <div class="map-section">
+            <h1>RoutifyMe</h1>
+            <div class="map-container" id="map">
+                <img src="static/images/map_image.jpeg" alt="Map Image">
+            </div>
         </div>
 
-        <!-- User account section -->
-        <div class="user-section">
+        <!-- User Account Section -->
+        <div class="user-account">
             <h2>User Account</h2>
             <form id="loginForm">
                 <label for="email">Email:</label><br>
@@ -30,34 +38,41 @@
             <button id="toggleSettingsButton" class="button">Settings</button>
         </div>
 
-        <!-- Location forms section -->
-        <div class="location-section">
-            <h2>Location Forms</h2>
-            <!-- Location search form -->
-            <form id="locationSearchForm">
-                <label for="location">Search Location:</label><br>
-                <input type="text" id="location" name="location"><br>
-                <input type="submit" value="Search">
-            </form>
-            
-            <!-- Other location forms (nearby places, route finder, etc.) -->
-            <form id="nearbyPlacesForm">
-                <label for="nearby">Find Nearby Places:</label><br>
-                <input type="text" id="nearby" name="nearby"><br>
-                <input type="submit" value="Find">
-            </form>
-
-            <form id="routeFinderForm">
-                <label for="start">Find Route:</label><br>
-                <input type="text" id="start" name="start" placeholder="Start location"><br>
-                <input type="text" id="end" name="end" placeholder="End location"><br>
-                <input type="submit" value="Find Route">
-            </form>
-
-            <button id="toggleLocationFormsButton" class="button">Hide Location Forms</button>
+        <!-- Sliding Page Overlay -->
+        <div class="sliding-page">
+            <div class="sliding-content">
+                <h2>Navigation</h2>
+                <ul class="navigation-list">
+                    <li>
+                        <h3>Route Finder</h3>
+                        <form id="routeFinderForm">
+                            <label for="start">Start Location:</label><br>
+                            <input type="text" id="start" name="start"><br>
+                            <label for="end">End Location:</label><br>
+                            <input type="text" id="end" name="end"><br>
+                            <input type="submit" value="Find Route">
+                        </form>
+                    </li>
+                    <li>
+                        <h3>Nearby Places</h3>
+                        <form id="nearbyPlacesForm">
+                            <label for="nearby">Search Nearby:</label><br>
+                            <input type="text" id="nearby" name="nearby"><br>
+                            <input type="submit" value="Find">
+                        </form>
+                    </li>
+                    <li>
+                        <h3>My Location</h3>
+                        <form id="myLocationForm">
+                            <button id="getCurrentLocationButton">Get Current Location</button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+            <button id="closeSlidingPageButton">Close</button>
         </div>
 
-        <!-- Settings section (initially hidden) -->
+        <!-- Settings Section -->
         <div id="settings" class="settings-section" style="display: none;">
             <h2>Settings</h2>
             <label for="theme">Theme:</label>
@@ -73,14 +88,10 @@
             </select><br><br>
             <button id="closeSettingsButton" class="button">Close Settings</button>
         </div>
-
-        <!-- Toggle button for dark/light mode -->
-        <button id="toggleThemeButton" class="button">Toggle Theme</button>
     </div>
 
     <!-- Include main.js script -->
-    <script type="text/javascript" src="static/js/main.js"></script>
+    <script src="./static/js/main.js"></script>
 </body>
 
 </html>
-
