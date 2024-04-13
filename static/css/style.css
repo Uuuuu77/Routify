@@ -1,8 +1,6 @@
-/* Static/css/styles.css */
-
-/* Default dark blue color scheme */
+/* Default deep dark blue color scheme */
 :root {
-    --background-color: #283593; /* Dark blue background */
+    --background-color: #0d47a1; /* Deep dark blue background */
     --text-color: #ffffff; /* White text */
 }
 
@@ -57,11 +55,16 @@ body {
     text-align: left;
 }
 
+.user-account button {
+    padding: 5px; /* Adjust padding for icon button */
+    font-size: 24px; /* Increase font size for icon button */
+}
+
 .sliding-page {
-    position: absolute;
-    top: 50%;
+    position: fixed;
+    bottom: 0;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
     background-color: #fff;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
